@@ -1,0 +1,21 @@
+{% extends 'echo/base.html' %}
+{% block content %}
+
+<section class="songs-section">
+    <div class="container">
+        <div class="auth-card mx-auto">
+            <h1 class="text-center mb-4">
+                Upload New Track
+            </h1>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary w-100">
+                    Upload Song
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
